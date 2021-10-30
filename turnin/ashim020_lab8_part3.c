@@ -17,7 +17,7 @@
 #endif
 
 unsigned short x = 0;
-unsigned short max = 0xFF;
+unsigned short max = 999;
 
 void ADC_init() {
     ADCSRA |= (1 << ADEN) | (1 << ADSC) | (1 << ADATE);
@@ -34,8 +34,8 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
         x = ADC;
-	tmpB = (char)x;
-	if(tmpB >= max / 2) {
+	//tmpB = (char)x;
+	if(x >= max / 2) {
 	    PORTB = 0x01;
 	} else {
 	    PORTB = 0x00;
