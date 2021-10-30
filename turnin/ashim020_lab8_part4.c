@@ -16,7 +16,7 @@
 #endif
 
 unsigned short x = 0;
-unsigned short max = 900;
+unsigned short max = 999;
 
 void ADC_init() {
     ADCSRA |= (1 << ADEN) | (1 << ADSC) | (1 << ADATE);
